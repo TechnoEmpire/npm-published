@@ -1,0 +1,29 @@
+.btn {
+  color: white;
+  background-color: orange;
+  padding: 10px 20px;
+  
+  .aaa {
+    color: white;
+    background-color: rgb(12, 37, 164);
+    padding: 10px 20px;
+    font-size: 2rem;
+
+    &:hover {
+      background-color: rgb(236, 16, 126);
+    }
+  }
+}
+
+.btnOrange {
+  background-color: orange;
+}
+
+.btnRed {
+  background-color: red;
+}
+
+.btnGreen {
+  background-color: green;
+}
+
