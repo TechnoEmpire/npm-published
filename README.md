@@ -12,9 +12,13 @@
   *  Storybook
   *  RollUp
 
+&nbsp;
 
- # Getting started by cloning
+> Installations
 
+<details>
+  <summary>Get Started by cloning</summary>
+  
 <span style="color: red; font-size: 12px; ">* This may not work depending on your PC</span>
 
   `npm i `
@@ -23,11 +27,11 @@
 
 
 ## How to create your own UI
-    src -> components -> Your Folder -> YourModal.jsx
+    src -> components -> Make Your Folder -> Make YourModal.jsx
 
-    src -> stories -> Your Folder -> YourModal.stories.jsx
+    src -> stories -> Make Your Folder -> Make YourModal.stories.jsx
 
-    src -> index.js -> export { default as YourModal }from './components/YourFolder/YourModal.jsx'
+    src -> index.js -> export { default as YourModal } from './components/YourFolder/YourModal.jsx'
 
 
 ## Build the project (RollUp)
@@ -43,10 +47,14 @@
 
     `npm publish`
 
+</details>
 
---------------
+&nbsp;
 
-#  How to use the components from other projects
+<details>
+  <summary>How to use TSYKPP npm package</summary>
+
+&nbsp;
 
   `npm i tsykpp`
 
@@ -69,8 +77,13 @@
   *   { KazModal }
   *  { ThuptenModal }
 
---------------
-# Getting Started from scratch
+</details>
+
+&nbsp;
+
+<details>
+  <summary>From Scratch</summary>
+
 
 <span style="color: red; font-size: 12px; ">* This may not work depending on your PC</span>
 
@@ -97,89 +110,95 @@
   6. Configure the rollup.config.js
   
   ```
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import babel from '@rollup/plugin-babel';
-import postcss from 'rollup-plugin-postcss';
- 
-export default {
-  input: 'src/index.js',
- 
-  output: [
-    {
-      file: 'dist/index.js', 
-      format: 'cjs',       
-    },
-    {
-      file: 'dist/index.esm.js', 
-      format: 'esm',        
-    }
-  ],
-  plugins: [
-    peerDepsExternal(), 
-    resolve(),    
-    commonjs(),   
-    babel({
-      babelHelpers: 'bundled',
-      exclude: 'node_modules/**',
-      presets: ['@babel/preset-react'] 
-    }),
- 
-    postcss({
-      extensions: ['.scss', '.css'], 
-      use: [
-        ['sass', {
-          includePaths: ['./src/styles', './node_modules']
-        }]
-      ],
-      minimize: true, 
-      extract: true, 
-    }),
-  ],
-  external: ['react', 'react-dom'],
-};
-```
-
------
-7. Delete default stories folder (If you clone this file, No need)
-
-8. Add components folder & stories folder in src (If you clone this file, No need)
-----
-
-9. Add this code to  .eslintrc.cjs  to avoid some warnings
- 
-
-  ```
-  rules: {
-      "react/prop-types": "off",// turn off warning for prop-types
-      "no-unused-vars": "off", // turn off warning for import React 
-    },
+  import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+  import resolve from '@rollup/plugin-node-resolve';
+  import commonjs from '@rollup/plugin-commonjs';
+  import babel from '@rollup/plugin-babel';
+  import postcss from 'rollup-plugin-postcss';
+   
+  export default {
+    input: 'src/index.js',
+   
+    output: [
+      {
+        file: 'dist/index.js', 
+        format: 'cjs',       
+      },
+      {
+        file: 'dist/index.esm.js', 
+        format: 'esm',        
+      }
+    ],
+    plugins: [
+      peerDepsExternal(), 
+      resolve(),    
+      commonjs(),   
+      babel({
+        babelHelpers: 'bundled',
+        exclude: 'node_modules/**',
+        presets: ['@babel/preset-react'] 
+      }),
+   
+      postcss({
+        extensions: ['.scss', '.css'], 
+        use: [
+          ['sass', {
+            includePaths: ['./src/styles', './node_modules']
+          }]
+        ],
+        minimize: true, 
+        extract: true, 
+      }),
+    ],
+    external: ['react', 'react-dom'],
+  };
   ```
 
-10. Create an entry point
- 
+  -----
+  7. Delete default stories folder (If you clone this file, No need)
 
-    crate index.js in src directory and export all UI components from here
+  8. Add components folder & stories folder in src (If you clone this file, No need)
+  ----
+
+  9. Add this code to  .eslintrc.cjs  to avoid some warnings
+   
+
     ```
-    export { default as KazModal } from './components/Kaz/KazModal.jsx';
-    export { default as ThuptenModal } from './components/Thupten/Modal.jsx';
+    rules: {
+        "react/prop-types": "off",// turn off warning for prop-types
+        "no-unused-vars": "off", // turn off warning for import React 
+      },
     ```
- 
- 
-11. Build UI components with RollUp
- 
 
-```npx rollup -c```
- 
-12. Publish the project to NPM
+  10. Create an entry point
+   
 
-    `npm login`
+      crate index.js in src directory and export all UI components from here
+      ```
+      export { default as KazModal } from './components/Kaz/KazModal.jsx';
+      export { default as ThuptenModal } from './components/Thupten/Modal.jsx';
+      ```
+   
+   
+  11. Build UI components with RollUp
+   
 
-    `npm publish`
+  ```npx rollup -c```
+   
+  12. Publish the project to NPM
 
------
+      npm login
+
+      npm publish
+
+</details>
+
+&nbsp;
 
 > Issues at the moment
 
 * rollup deprecated warnings
+
+* Mac M1, M2 chip users may have some installation issues
+
+* node-sass installation issues
