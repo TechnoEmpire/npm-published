@@ -199,6 +199,10 @@
 
 * rollup deprecated warnings
 
+* node-sass installation issues
+
 * Mac M1, M2 chip users may have some installation issues
 
-* node-sass installation issues
+  May need to run for M1
+
+   `npm install --arch=arm64`
