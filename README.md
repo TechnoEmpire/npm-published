@@ -8,7 +8,7 @@
 
 > Languages & Libraries
   *  React (Vite) Node v18 required
-  *  Sass
+  *  Sass (node-sass -> sass)
   *  Storybook
   *  RollUp
 
@@ -17,7 +17,7 @@
 > Installations
 
 <details>
-  <summary>Get Started by cloning</summary>
+  <summary>Get Started by cloning & NPM Publish</summary>
   
 <span style="color: red; font-size: 12px; ">* This may not work depending on your PC</span>
 
@@ -43,9 +43,9 @@
 ## Update (Publish) the project
    You must test the project before and after publish
 
-    `npm login`
+    npm login
 
-    `npm publish`
+    npm publish
 
 </details>
 
