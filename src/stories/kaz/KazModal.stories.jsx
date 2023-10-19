@@ -33,7 +33,7 @@ export const Kaz = {
 // };
 
 
-export const GroupedKaz = {
+export const TrialKaz = {
   render: () => (
     <div style={{ padding: 10 }}>
       <KazModal variant="orange" />
