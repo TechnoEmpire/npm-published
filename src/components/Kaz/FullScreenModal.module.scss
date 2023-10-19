@@ -1,0 +1,162 @@
+.cp_modal04 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	font-size: 1rem;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background: #cccccc;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+}
+.cp_modal04 h2 {
+	font-size: 1.6em;
+	line-height: 1.2;
+	margin: 1.414em 0 0.5em;
+}
+.cp_modal04 rt,.cp_modal04 rp {
+	font-size: 30%;
+}
+.cp_modal04 .cp_modal {
+	display: inline-block;
+	padding: 1em;
+}
+@media (min-width: 43.75em) {
+	.cp_modal04 .cp_modal {
+		padding: 1.5em;
+	}
+}
+.cp_modal04 .cp_modal > label {
+	font-weight: bold;
+	display: inline-block;
+	padding: 0.75em 1.5em;
+	cursor: pointer;
+	-webkit-transition: all 0.55s;
+	        transition: all 0.55s;
+	color: #ffffff;
+	border: 1px solid #00bcd4;
+	border-radius: 0.2em;
+	background: #00bcd4;
+	text-shadow: 0px 1px 1px #333333;
+  padding: 1.4rem 2.4rem;
+}
+.cp_modal04 .cp_modal > label:hover {
+	-webkit-transform: scale(0.97);
+	        transform: scale(0.97);
+          filter: brightness(1.1);
+          opacity: 0.9;
+}
+.cp_modal04 .cp_overlay {
+	position: fixed;
+	z-index: 600;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	background: rgba(27,37,56,1);
+	text-shadow: none;
+}
+.cp_modal04 .cp_wrap {
+	position: relative;
+	overflow-y: auto;
+	width: 90%;
+	height: 80%;
+	margin: 0 auto;
+	padding: 1em 1em;
+	background: rgba(27,37,56,1);
+}
+@media (min-width: 50em) {
+	.cp_modal04 .cp_wrap {
+		padding: 1.75em;
+	}
+}
+@media (min-height: 37.5em) {
+	.cp_modal04 .cp_wrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+	}
+}
+.cp_modal04 .cp_wrap label {
+	line-height: 1.5;
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	display: inline-block;
+	width: 1.5em;
+	height: 1.5em;
+	cursor: pointer;
+	color: #ffffff;
+	border-radius: 50%;
+	background: #616161;
+}
+.cp_modal04 .cp_wrap label.cp_btn {
+	position: relative;
+	overflow: hidden;
+	width: 4em;
+	padding: 10px 30px;
+	color: #ffffff;
+	border-radius: 3px;
+}
+.cp_modal04 .cp_wrap h2 {
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.cp_modal04 .cp_wrap p {
+	text-align: justify;
+	color: #ffffff;
+	margin: 0;
+	line-height: 2.3;
+	text-indent: 1em;
+}
+.cp_modal04 p.citation {
+	// text-align: right;
+  font-size: 1.4rem;
+  margin: 4rem 0 8rem 0;
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 2rem 0 4rem 0;
+  }
+}
+// .cp_modal04 p.citation::before {
+// 	content: '00'
+// }
+// .cp_modal04 p:not(.citation) {
+// 	margin: 3rem 0;
+// }
+.cp_modal04 .cp_modal input:focus ~ label {
+	-webkit-transform: scale(0.97);
+	        transform: scale(0.97);
+}
+.cp_modal04 input {
+	position: absolute;
+	top: -1000px;
+}
+.cp_modal04 .cp_overlay {
+	z-index: -100;
+	-webkit-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	        transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-transform: scale(0.5);
+	        transform: scale(0.5);
+	opacity: 0;
+}
+.cp_modal04 input:checked ~ .cp_overlay {
+	z-index: 800;
+	-webkit-transform: scale(1);
+	        transform: scale(1);
+	opacity: 1;
+}

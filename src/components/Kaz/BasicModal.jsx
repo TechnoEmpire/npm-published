@@ -6,7 +6,7 @@ import styles from "./BasicModal.module.scss";
 const BasicModal = ({
   btnTexts = "OPEN MODAL",
   btnTextsColor = "#fff",
-  texts = "Default text",
+  texts = "Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text ",
   btnColor,
   modalColor,
   modalTextsColor = "#2f2f2f",
