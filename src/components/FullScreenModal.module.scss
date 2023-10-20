@@ -1,4 +1,8 @@
+@use '../styles/scss/abstracts/index' as *;
+
+
 .cp_modal04 {
+	font-family: $fontFamily;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -11,7 +15,7 @@
 	height: 100vh;
 	margin: 0;
 	padding: 0;
-	background: #cccccc;
+	background: $primaryColor;
 	-webkit-box-align: center;
 	align-items: center;
 	-webkit-box-pack: center;
@@ -35,18 +39,15 @@
 	}
 }
 .cp_modal04 .cp_modal > label {
-	font-weight: bold;
 	display: inline-block;
 	padding: 0.75em 1.5em;
 	cursor: pointer;
 	-webkit-transition: all 0.55s;
 	        transition: all 0.55s;
-	color: #ffffff;
-	border: 1px solid #00bcd4;
-	border-radius: 0.2em;
-	background: #00bcd4;
-	text-shadow: 0px 1px 1px #333333;
+	color: $primaryColor;
+	border-radius: $borderRadius;
   padding: 1.4rem 2.4rem;
+	box-shadow: $shadow;
 }
 .cp_modal04 .cp_modal > label:hover {
 	-webkit-transform: scale(0.97);
@@ -62,8 +63,7 @@
 	bottom: 0;
 	left: 0;
 	text-align: center;
-	background: rgba(27,37,56,1);
-	text-shadow: none;
+	background: $brandSkewColor;
 }
 .cp_modal04 .cp_wrap {
 	position: relative;
@@ -71,8 +71,8 @@
 	width: 90%;
 	height: 80%;
 	margin: 0 auto;
-	padding: 1em 1em;
-	background: rgba(27,37,56,1);
+	padding: $space $space;
+	background: $backgroundMute;
 }
 @media (min-width: 50em) {
 	.cp_modal04 .cp_wrap {
@@ -91,32 +91,32 @@
 .cp_modal04 .cp_wrap label {
 	line-height: 1.5;
 	position: absolute;
-	top: 0.5em;
-	right: 0.5em;
+	top: $spaceHalf;
+	right: $spaceHalf;
 	display: inline-block;
-	width: 1.5em;
-	height: 1.5em;
+	width: $spaceOneHalf;
+	height: $spaceOneHalf;
 	cursor: pointer;
-	color: #ffffff;
-	border-radius: 50%;
-	background: #616161;
+	color: $primaryColor;
+	border-radius: $buttonBorderRadius;
+	background: $backgroundMute;
 }
 .cp_modal04 .cp_wrap label.cp_btn {
 	position: relative;
 	overflow: hidden;
 	width: 4em;
 	padding: 10px 30px;
-	color: #ffffff;
-	border-radius: 3px;
+	color: $primaryColor;
+	border-radius: $borderRadius;
 }
 .cp_modal04 .cp_wrap h2 {
 	margin-bottom: 1em;
 	text-transform: uppercase;
-	color: #ffffff;
+	color: $primaryColor;
 }
 .cp_modal04 .cp_wrap p {
 	text-align: justify;
-	color: #ffffff;
+	color: $primaryColor;
 	margin: 0;
 	line-height: 2.3;
 	text-indent: 1em;
@@ -161,4 +161,10 @@
 	opacity: 1;
 }
 
+hr {
+  border: none;
+  height: 2px;
+	width: 50%;
+  background-color: $highlightColor; 
+}
 

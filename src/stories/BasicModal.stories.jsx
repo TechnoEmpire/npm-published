@@ -1,7 +1,7 @@
-import BasicModal from '../../../src/components/Kaz/BasicModal';
+import BasicModal from '../components/BasicModal';
 
 const meta = {
-  title: 'COMPONENTS/KazModal',
+  title: 'COMPONENTS',
   component: BasicModal,
   argTypes: {
     btnColor: {
@@ -27,18 +27,12 @@ const meta = {
 export default meta;
 
 
-export const Basic = {
-  // args: {
-  //   variant: 'orange',
-  // }
-  // texts: "User's text is here",
-  // variant: 'orange',
-};
+export const Basic = {};
 
 //! ================================================
 //! Test the effects of the props in Storybook here
 //! ================================================
-// export const BasicModalTrial = {
+// export const BasicTest = {
 //   render: () => (
 //     <>
 //       {/* Default */}

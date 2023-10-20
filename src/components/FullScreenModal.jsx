@@ -27,12 +27,13 @@ const FullScreenModal = ({
 				<label style={{ backgroundColor: `${btnColor}`, color: `${btnTextColor}` }} htmlFor="cp_trigger">{btnText}</label>
 				<div className={`${styles.cp_overlay}`} role="dialog">
 					<div className={`${styles.cp_wrap}`}>
-						<label htmlFor="cp_trigger"></label>
+						<label htmlFor="cp_trigger">×</label>
 						<h2>{modalTitle}</h2>
+						<hr className={`${styles.hr}`}/>
 						<p className={`${styles.citation}`}>
 							{modalText}
 						</p>
-						<label htmlFor="cp_trigger" className={`${styles.cp_btn}`}>閉じる</label>
+						<label htmlFor="cp_trigger" className={`${styles.cp_btn}`}>CLOSE</label>
 					</div>
 				</div>
 			</div>

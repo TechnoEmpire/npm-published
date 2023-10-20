@@ -1,7 +1,7 @@
-import FullScreenModal from '../../components/Kaz/FullScreenModal';
+import FullScreenModal from '../components/FullScreenModal';
 
 const meta = {
-  title: 'COMPONENTS/KazModal',
+  title: 'COMPONENTS',
   component: FullScreenModal,
   argTypes: {
     btnText: {
@@ -35,20 +35,17 @@ export const FullScreen = {
 //! ================================================
 //! Test the effects of the props in Storybook here
 //! ================================================
-// export const FullScreenTrial = {
+// export const FullScreenTest = {
 //   render: () => (
 //     <>
-
 //       {/* Default */}
 //       <FullScreenModal
 //         btnText='Launch Modal'
 //         btnColor='#1be02e'
 //         btnTextColor='#e7e5e5'
-
 //         modalTitle='This is a title!'
 //         modalText="aaajkdfsajkjhfjksadhfkjsadhfkjsadhfjk"
 //       />
-      
 //     </>
 //   )
 // }
