@@ -35,23 +35,23 @@ export const FullScreen = {
 //! ================================================
 //! Test the effects of the props in Storybook here
 //! ================================================
-export const FullScreenTrial = {
-  render: () => (
-    <>
+// export const FullScreenTrial = {
+//   render: () => (
+//     <>
 
-      {/* Default */}
-      <FullScreenModal
-        btnText='Launch Modal'
-        btnColor='#1be02e'
-        btnTextColor='#e7e5e5'
+//       {/* Default */}
+//       <FullScreenModal
+//         btnText='Launch Modal'
+//         btnColor='#1be02e'
+//         btnTextColor='#e7e5e5'
 
-        modalTitle='This is a title!'
-        modalText="aaajkdfsajkjhfjksadhfkjsadhfkjsadhfjk"
-      />
+//         modalTitle='This is a title!'
+//         modalText="aaajkdfsajkjhfjksadhfkjsadhfkjsadhfjk"
+//       />
       
-    </>
-  )
-}
+//     </>
+//   )
+// }
 
 
 export default meta;

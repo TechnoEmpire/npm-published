@@ -3,7 +3,6 @@ import React from 'react';
 
 import styles from "./FullScreenModal.module.scss";
 
-import { useState } from 'react';
 
 
 
@@ -14,14 +13,14 @@ const FullScreenModal = ({
 	modalTitle = "Modal Title",
 	modalText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eligendi doloremque nostrum provident consequuntur tenetur modi mollitia dolor inventore corrupti amet fuga fugit, cupiditate sapiente quo? Sint eveniet saepe ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eligendi doloremque nostrum provident consequuntur tenetur modi mollitia dolor inventore corrupti amet fuga fugit, cupiditate sapiente quo? Sint eveniet saepe ratione.",
 }
-
 ) => {
+
 	
-	const positionType = position === 'slide-up' ? 'slide-up' : 'slide-down';
+
 	return (
 		<div
-			// className={`${styles.cp_modal04}`}
-			className={`${styles.modalContent} ${styles[positionType]} ${className}`}
+			className={`${styles.cp_modal04}`}
+			// className={`${styles.modalContent} ${styles[positionType]} ${className}`}
 		>
 			<div className={`${styles.cp_modal}`}>
 				<input id="cp_trigger" type="checkbox" />

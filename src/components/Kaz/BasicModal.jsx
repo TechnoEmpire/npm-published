@@ -4,6 +4,7 @@ import React from 'react';
 import styles from "./BasicModal.module.scss";
 
 const BasicModal = ({
+  position = "slide-up",
   btnTexts = "OPEN MODAL",
   btnTextsColor = "#fff",
   texts = "Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text Default text ",
@@ -11,6 +12,10 @@ const BasicModal = ({
   modalColor,
   modalTextsColor = "#2f2f2f",
 }) => {
+
+  // const positionType = position === 'slide-up' ? 'slide-up' : 'slide-down';
+  const positionType = position === 'slide-up' ;
+
 
   return (
     <div className={`${styles.modal__wrap}`}>
@@ -33,10 +38,11 @@ const BasicModal = ({
 
         <div className={`${styles.modal__content__wrap}`}>
 
-          <label htmlFor="modal__close" className={`${styles.modal__close__label}`}>×</label>
+          <label htmlFor="modal__close" className={`${styles.modal__close__label} `}>×</label>
 
+          {/* //* Animation */}
           <div 
-          className={`${styles.modal__content}`} 
+          className={`${styles.modal__content} ${styles.modalContent} ${styles[positionType]}`} 
           style={{
             backgroundColor: `${modalColor}`,
             color: `${modalTextsColor}`
@@ -48,6 +54,7 @@ const BasicModal = ({
         <label htmlFor="modal__close">
           <div className={`${styles.modal__background}`}></div>
         </label>
+
       </div>
     </div>
   );
