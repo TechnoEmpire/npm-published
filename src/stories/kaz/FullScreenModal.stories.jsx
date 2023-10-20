@@ -4,19 +4,19 @@ const meta = {
   title: 'COMPONENTS/KazModal',
   component: FullScreenModal,
   argTypes: {
-    btnText : {
+    btnText: {
       control: { type: 'text' },
     },
     btnColor: {
       control: { type: 'color' },
     },
-    btnTextColor : {
+    btnTextColor: {
       control: { type: 'color' },
     },
-    modalTitle : {
+    modalTitle: {
       control: { type: 'text' },
     },
-    modalText : {
+    modalText: {
       control: { type: 'text' },
     },
 
@@ -24,7 +24,7 @@ const meta = {
 };
 
 
-export const FullScreen = { 
+export const FullScreen = {
   // args: {
   //   variant: 'orange',
   // }
@@ -35,21 +35,23 @@ export const FullScreen = {
 //! ================================================
 //! Test the effects of the props in Storybook here
 //! ================================================
-// export const FullScreenTrial = {
-//   render: () => (
-//     <>
-//       {/* Default */}
-//       <FullScreenModal 
-//       btnText='Launch Modal'
-//       btnColor='#6525e5'
-//       btnTextColor='#e7e5e5'
+export const FullScreenTrial = {
+  render: () => (
+    <>
 
-//       modalTitle='This is a title!'
-//       modalText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eligendi doloremque nostrum provident consequuntur tenetur modi mollitia dolor inventore corrupti amet fuga fugit, cupiditate sapiente quo? Sint eveniet saepe ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eligendi doloremque nostrum provident consequuntur tenetur modi mollitia dolor inventore corrupti amet fuga fugit, cupiditate sapiente quo? Sint eveniet saepe ratione."
-//       />
-//     </>
-//   )
-// }
+      {/* Default */}
+      <FullScreenModal
+        btnText='Launch Modal'
+        btnColor='#1be02e'
+        btnTextColor='#e7e5e5'
+
+        modalTitle='This is a title!'
+        modalText="aaajkdfsajkjhfjksadhfkjsadhfkjsadhfjk"
+      />
+      
+    </>
+  )
+}
 
 
 export default meta;
