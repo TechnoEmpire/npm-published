@@ -1,170 +1,177 @@
-@use '../styles/scss/abstracts/index' as *;
+@use "../styles/scss/abstracts/index" as *;
 
+/* Mixin---------------------------------------------- */
+$breakpoints: (
+  "s": "screen and (max-width:480px)",
+  "m": "screen and (max-width: 767px) and (min-width:480px)",
+  "l": "screen and (max-width: 1000px) and (min-width: 767px)",
+  "xl": "screen and (min-width: 1001px) ",
+) !default;
 
-.cp_modal04 {
-	font-family: $fontFamily;
-	position: fixed;
-	top: 0;
-	left: 0;
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-	font-size: 1rem;
-	width: 100%;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	background: $primaryColor;
-	-webkit-box-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	justify-content: center;
-}
-.cp_modal04 h2 {
-	font-size: 1.6em;
-	line-height: 1.2;
-	margin: 1.414em 0 0.5em;
-}
-.cp_modal04 rt,.cp_modal04 rp {
-	font-size: 30%;
-}
-.cp_modal04 .cp_modal {
-	display: inline-block;
-	padding: 1em;
-}
-@media (min-width: 43.75em) {
-	.cp_modal04 .cp_modal {
-		padding: 1.5em;
-	}
-}
-.cp_modal04 .cp_modal > label {
-	display: inline-block;
-	padding: 0.75em 1.5em;
-	cursor: pointer;
-	-webkit-transition: all 0.55s;
-	        transition: all 0.55s;
-	color: $primaryColor;
-	border-radius: $borderRadius;
-  padding: 1.4rem 2.4rem;
-	box-shadow: $shadow;
-}
-.cp_modal04 .cp_modal > label:hover {
-	-webkit-transform: scale(0.97);
-	        transform: scale(0.97);
-          filter: brightness(1.1);
-          opacity: 0.9;
-}
-.cp_modal04 .cp_overlay {
-	position: fixed;
-	z-index: 600;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	text-align: center;
-	background: $brandSkewColor;
-}
-.cp_modal04 .cp_wrap {
-	position: relative;
-	overflow-y: auto;
-	width: 90%;
-	height: 80%;
-	margin: 0 auto;
-	padding: $space $space;
-	background: $backgroundMute;
-}
-@media (min-width: 50em) {
-	.cp_modal04 .cp_wrap {
-		padding: 1.75em;
-	}
-}
-@media (min-height: 37.5em) {
-	.cp_modal04 .cp_wrap {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
-	}
-}
-.cp_modal04 .cp_wrap label {
-	line-height: 1.5;
-	position: absolute;
-	top: $spaceHalf;
-	right: $spaceHalf;
-	display: inline-block;
-	width: $spaceOneHalf;
-	height: $spaceOneHalf;
-	cursor: pointer;
-	color: $primaryColor;
-	border-radius: $buttonBorderRadius;
-	background: $backgroundMute;
-}
-.cp_modal04 .cp_wrap label.cp_btn {
-	position: relative;
-	overflow: hidden;
-	width: 4em;
-	padding: 10px 30px;
-	color: $primaryColor;
-	border-radius: $borderRadius;
-}
-.cp_modal04 .cp_wrap h2 {
-	margin-bottom: 1em;
-	text-transform: uppercase;
-	color: $primaryColor;
-}
-.cp_modal04 .cp_wrap p {
-	text-align: justify;
-	color: $primaryColor;
-	margin: 0;
-	line-height: 2.3;
-	text-indent: 1em;
-}
-.cp_modal04 p.citation {
-	// text-align: right;
-  font-size: 1.4rem;
-  margin: 4rem 0 8rem 0;
-
-  @media screen and (max-width: 480px) {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    margin: 2rem 0 4rem 0;
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
   }
 }
-// .cp_modal04 p.citation::before {
-// 	content: '00'
-// }
-// .cp_modal04 p:not(.citation) {
-// 	margin: 3rem 0;
-// }
-.cp_modal04 .cp_modal input:focus ~ label {
-	-webkit-transform: scale(0.97);
-	        transform: scale(0.97);
-}
-.cp_modal04 input {
-	position: absolute;
-	top: -1000px;
-}
-.cp_modal04 .cp_overlay {
-	z-index: -100;
-	-webkit-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	        transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	-webkit-transform: scale(0.5);
-	        transform: scale(0.5);
-	opacity: 0;
-}
-.cp_modal04 input:checked ~ .cp_overlay {
-	z-index: 800;
-	-webkit-transform: scale(1);
-	        transform: scale(1);
-	opacity: 1;
+// Example
+// @include mq(l) {
+//     color: red;
+//   }
+/* ---------------------------------------------- */
+
+.FullScreenModal {
+  font-family: $fontFamily;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: $primaryColor;
+
+	// Shouldn't be centerised when this UI called ↓↓
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  // Hidden Checkbox
+  input {
+    position: absolute;
+    top: -1000px; // hide checkbox
+  }
+
+  // When the Open Button is clicked modal got these effects
+  input:checked ~ .FullScreenModal__overlay {
+    z-index: 800;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  h2 {
+    font-size: 1.6em;
+    line-height: 1.2;
+    margin: 1.414em 0 0.5em;
+  }
+
+  // OPEN BUTTON WRAP
+  .openBtnWrap {
+    display: inline-block;
+    padding: 1rem;
+
+    // When Button is focused
+    input:focus ~ label {
+      -webkit-transform: scale(0.97);
+      transform: scale(0.97);
+    }
+  }
+
+  // OPEN BUTTON
+  .openBtnWrap > label {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    -webkit-transition: all 0.55s;
+    transition: all 0.55s;
+    color: $primaryColor;
+    border-radius: $borderRadius;
+    padding: 1.4rem 2.4rem;
+    box-shadow: $shadow;
+
+    &:hover {
+      -webkit-transform: scale(0.97);
+      transform: scale(0.97);
+      filter: brightness(1.1);
+      opacity: 0.9;
+    }
+  }
+
+  // MODAL BACKGROUND
+  &__overlay {
+    position: fixed;
+    z-index: 600;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background: $brandSkewColor;
+
+    z-index: -100;
+    -webkit-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  // MODAL BOX
+  &__modalBox {
+    position: relative;
+    overflow-y: auto;
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    padding: $space $space;
+    background: $backgroundMute;
+
+    label {
+      line-height: 1.5;
+      position: absolute;
+      top: $spaceHalf;
+      right: $spaceHalf;
+      display: inline-block;
+      width: $spaceOneHalf;
+      height: $spaceOneHalf;
+      cursor: pointer;
+      color: $primaryColor;
+      border-radius: $buttonBorderRadius;
+      background: $backgroundMute;
+    }
+
+    // MODAL TITLE
+    h2 {
+      margin-bottom: 1em;
+      text-transform: uppercase;
+      color: $primaryColor;
+    }
+
+    // MODAL TEXT
+    p {
+      text-align: justify;
+      color: $primaryColor;
+      margin: 0;
+      line-height: 2.3;
+      text-indent: 1em;
+
+      font-size: 1.4rem;
+      margin: 4rem 0 8rem 0;
+
+      @include mq(s) {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        margin: 2rem 0 4rem 0;
+      }
+    }
+  }
+
+  // CLOSE BUTTON
+  .closeBtn {
+    position: relative;
+    overflow: hidden;
+    width: 4em;
+    padding: 10px 30px;
+    color: $primaryColor;
+    border-radius: $borderRadius;
+  }
 }
 
 hr {
   border: none;
   height: 2px;
-	width: 50%;
-  background-color: $highlightColor; 
+  width: 50%;
+  background-color: $highlightColor;
 }
-

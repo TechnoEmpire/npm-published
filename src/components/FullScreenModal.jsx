@@ -7,7 +7,7 @@ import styles from "./FullScreenModal.module.scss";
 
 
 const FullScreenModal = ({
-  btnText = "OPEN MODAL",
+	btnText = "OPEN MODAL",
 	btnColor = "#373737",
 	btnTextColor = "#fff",
 	modalTitle = "Modal Title",
@@ -15,26 +15,39 @@ const FullScreenModal = ({
 }
 ) => {
 
-	
-
 	return (
-		<div
-			className={`${styles.cp_modal04}`}
-			// className={`${styles.modalContent} ${styles[positionType]} ${className}`}
-		>
-			<div className={`${styles.cp_modal}`}>
-				<input id="cp_trigger" type="checkbox" />
-				<label style={{ backgroundColor: `${btnColor}`, color: `${btnTextColor}` }} htmlFor="cp_trigger">{btnText}</label>
-				<div className={`${styles.cp_overlay}`} role="dialog">
-					<div className={`${styles.cp_wrap}`}>
-						<label htmlFor="cp_trigger">×</label>
+		<div className={`${styles.FullScreenModal}`}>
+
+			{/* OPEN BUTTON WRAP */}
+			<div className={`${styles.openBtnWrap}`}>
+
+				{/* Hidden Checkbox */}
+				<input id="MODAL_TRIGGER" type="checkbox" />
+
+				{/* OPEN BUTTON */}
+				<label
+					style={{ backgroundColor: `${btnColor}`, color: `${btnTextColor}` }} htmlFor="MODAL_TRIGGER"
+				>
+					{btnText}
+				</label>
+
+				{/*  MODAL BACKGROUND */}
+				<div className={`${styles.FullScreenModal__overlay}`} role="dialog">
+
+					{/* MODAL BOX */}
+					<div className={`${styles.FullScreenModal__modalBox}`}>
+						<label htmlFor="MODAL_TRIGGER">×</label>
 						<h2>{modalTitle}</h2>
-						<hr className={`${styles.hr}`}/>
-						<p className={`${styles.citation}`}>
+						<hr className={`${styles.hr}`} />
+						<p >
 							{modalText}
 						</p>
-						<label htmlFor="cp_trigger" className={`${styles.cp_btn}`}>CLOSE</label>
+
+						{/* CLOSE BUTTON */}
+						<label htmlFor="MODAL_TRIGGER" className={`${styles.closeBtn}`}>CLOSE</label>
+						
 					</div>
+
 				</div>
 			</div>
 		</div>
