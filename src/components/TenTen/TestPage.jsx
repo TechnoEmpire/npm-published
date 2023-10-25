@@ -1,35 +1,10 @@
-<h1>Modal (Pop-UP)</h1>
-
-<h2>
-  <a href="vercel">Full Documentation</a>
-</h2>
-
-### Installing the latest version
-
-To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com):
-
-- `npm install ` or `yarn add `.
-
-```
-  $ npm install
-  $ yarn add
-```
-
-## Packages
-
-| TSKYPP | Version |
-
-# Example
-
-Here is a simple example of react-modal being used in an app with some custom styles and focusable input elements within the modal content:
-
-```
 import React, { useState } from 'react';
 import { Button, Modal, ModalContent, ModalHeader, ModalBody } from '../../components/TenTen'; // Adjust the relative import path
 
 import styles from './TestPage.module.scss';
 
-const TestPage = () => {
+const TestPage = ({ btnBg, btnTextColor }) => {
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -43,16 +18,18 @@ const TestPage = () => {
   return (
     <div>
       {/* Import button here */}
-      <Button onClick={openModal} className={styles.btn}>
-        {/* Custom child elements */}
-        <span className={styles.btnOne}>BYe</span>
-        <span className={styles.btnTwo}>HI</span>
+      <Button onClick={openModal} className={styles.btn} btnBg={btnBg} btnTextColor={btnTextColor} >
+    <>
+    <span className={styles.btnOne}>Click me</span>
+    {/* <span className="btnOne">Click me</span> */}
+      <span className={styles.btnTwo}>Great!</span> 
+    </>
       </Button>
 
       {/* Import button here */}
       <Modal isOpen={isOpen} closeModal={closeModal}>
 
-      <ModalContent position="slide-up">
+      <ModalContent position="full-screen">
 
         {/* <ModalContent className={styles.content} > */}
           <ModalHeader onClick={closeModal} className={styles.Hea}>
@@ -60,7 +37,7 @@ const TestPage = () => {
             <h1>Login </h1>
           </ModalHeader>
           <ModalBody>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quo?</p>
+            {/* <p>Hello world</p> */}
           </ModalBody>
         </ModalContent>
       </Modal>
@@ -69,8 +46,3 @@ const TestPage = () => {
 };
 
 export default TestPage;
-
-
-```
-
-##

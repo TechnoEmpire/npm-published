@@ -1,0 +1,50 @@
+@use '../../../styles//scss/abstracts/index' as *;
+
+
+/* Button */
+.btn {
+  margin: 2rem 0;
+  width: 140px;
+  height: 50px;
+  // background:$btnColor ;
+  // color: $whiteColor;
+  border-radius: $borderRadius;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  // box-shadow:$boxShadow;
+  overflow: hidden;
+  span {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: top 0.5s;
+    }
+}
+
+.btnOne {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btnTwo {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn:hover .btnOne {
+  top: -100%;
+}
+
+.btn:hover .btnTwo {
+  top: 50%;
+}
+
+/* Button end */
