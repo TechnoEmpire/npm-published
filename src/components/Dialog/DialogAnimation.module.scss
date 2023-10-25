@@ -12,8 +12,8 @@
   border-radius: $borderRadius;
   box-shadow: $shadow;
   z-index: 1000;
-  animation: slide-up 0.5s ease forwards;
   padding: 2rem;
+  animation: slide-up 0.5s ease forwards;
 
   @media screen and (max-width: 768px) {
     min-width: 70%;
@@ -31,7 +31,6 @@
   animation: fade-in 0.5s ease-in-out forwards;
   padding: 4rem 4rem;
 }
-
 
 @keyframes fade-in {
   from {

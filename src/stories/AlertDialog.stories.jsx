@@ -1,19 +1,19 @@
 import React from 'react';
 
-import Test from '../components/Alert/Test.jsx';
+import Sample from '../components/Dialog/Sample.jsx';
 
 export default {
-  title: 'Components/AlertDialog',
-  component: Test,
+  title: 'Components/Dialog',
+  component: Sample,
 };
 
 // Display Test component
-const Template = (args) => <Test {...args} />;
+const Template = (args) => <Sample {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const SamplePage = Template.bind({});
+SamplePage.args = {};
 
-Default.parameters = {
+SamplePage.parameters = {
   controls: { 
     expanded: true, 
     include: [ 

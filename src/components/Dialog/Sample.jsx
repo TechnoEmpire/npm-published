@@ -1,49 +1,48 @@
-// App.jsx
 import React from 'react';
-import AlertDialog from './AlertDialog.jsx';
+import Dialog from './Dialog.jsx';
 import Button from './Button.jsx';
 import Flex from './Flex.jsx';
 
-const App = () => {
-  const handleRevokeAccess = () => {
+const Sample = () => {
+  const handleFunction = () => {
     alert("You did something!");
   };
 
   return (
     <div style={{ padding: '20px' }}>
-      <AlertDialog.Root>
-        <AlertDialog.Trigger>
+      <Dialog.Root>
+        
+        <Dialog.Trigger>
           {/*  you can control Button (variant = soft or solid) */}
           <Button variant="solid" textColor="rgb(62, 62, 62)" bgColor="rgb(229, 229, 229)">
             OPEN MODAL
           </Button>
-        </AlertDialog.Trigger>
+        </Dialog.Trigger>
 
         {/*  you can control  (full-screen or slide-up/down ) */}
-        <AlertDialog.Content position={"slide-down"} >
-          <AlertDialog.Title>Opened Modal</AlertDialog.Title>
+        <Dialog.Content position={"slide-up"} >
+          <Dialog.Title>Opened Modal</Dialog.Title>
 
-          <AlertDialog.Description>
+          <Dialog.Description>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eum, delectus adipisci ducimus.
-          </AlertDialog.Description>
+          </Dialog.Description>
 
           {/*  you can control flex */}
           <Flex gap="20px" mt="60px" justify="end">
-            <AlertDialog.Cancel>
+            <Dialog.Cancel>
               <Button variant="soft" >Cancel</Button>
-            </AlertDialog.Cancel>
+            </Dialog.Cancel>
 
-            <AlertDialog.Action onAction={handleRevokeAccess}>
+            <Dialog.Action onAction={handleFunction}>
               <Button variant="solid"  bgColor="rgb(123, 229, 41)">Do something</Button>
-            </AlertDialog.Action>
+            </Dialog.Action>
           </Flex>
 
-        </AlertDialog.Content>
-
-      </AlertDialog.Root>
+        </Dialog.Content>
+      </Dialog.Root>
 
     </div>
   );
 };
 
-export default App;
+export default Sample;

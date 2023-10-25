@@ -1,23 +1,22 @@
-import React, { useState, useContext } from 'react';
-
 // CSS Animation
 import styles from './DialogAnimation.module.scss';
+import React, { useState, useContext } from 'react';
 
-// Create a new context for the AlertDialog
-const AlertDialogContext = React.createContext();
+// Create a new context for the Dialog
+const DialogContext = React.createContext();
 
 // ======================================================
 // Root component 
 // To provide the isOpen state and its setter function to its descendants
 // ======================================================
-const AlertDialogRoot = ({ children }) => {
+const DialogRoot = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Provide the isOpen state and its setter function to descendants using the AlertDialogContext (value)
+  // Provide the isOpen state and its setter function to descendants using the DialogContext (value)
   return (
-    <AlertDialogContext.Provider value={{ isOpen, setIsOpen }}>
+    <DialogContext.Provider value={{ isOpen, setIsOpen }}>
       {children}
-    </AlertDialogContext.Provider>
+    </DialogContext.Provider>
   );
 };
 
@@ -27,9 +26,9 @@ const AlertDialogRoot = ({ children }) => {
 // This opens the Dialog when its child component is clicked
 const Trigger = ({ children }) => {
   // Extract the setIsOpen function from context
-  const { setIsOpen } = useContext(AlertDialogContext);
+  const { setIsOpen } = useContext(DialogContext);
 
-  // When the child of Trigger is clicked, open the AlertDialog
+  // When the child of Trigger is clicked, open the Dialog
   // cloneElement is used to pass the onClick function to the child of Trigger
   return React.cloneElement(children, { onClick: () => setIsOpen(true) });
 };
@@ -40,13 +39,23 @@ const Trigger = ({ children }) => {
 const Content = ({ position, children }) => {
 
   // Extract the isOpen state and its setter function from context
-  const { isOpen, setIsOpen } = useContext(AlertDialogContext);
+  const { isOpen, setIsOpen } = useContext(DialogContext);
 
-  const positionType = position === 'slide-up' ? 'slide-up'
-  :position === 'slide-down' ?'slide-down'
-  :position === 'full-screen'? 'full-screen'
-  :'default';
+  let positionType;
 
+  switch (position) {
+    case 'slide-up':
+      positionType = 'slide-up';
+      break;
+    case 'slide-down':
+      positionType = 'slide-down';
+      break;
+    case 'full-screen':
+      positionType = 'full-screen';
+      break;
+    default:
+      positionType = 'default';
+  }
 
   // Styles for the dialog modal
   const modalStyles = {
@@ -72,14 +81,16 @@ const Content = ({ position, children }) => {
       <div style={overlayStyles} onClick={() => setIsOpen(false)} />
 
       {/*//!  Dialog content with SCSS*/}
-      <div 
-      style={modalStyles}
-      className={`${styles.modalContent} ${styles[positionType]} `}
+      <div
+        style={modalStyles}
+        className={`${styles['modalContent']} ${styles[positionType]}`}
       >
-        {children}</div>
+        {children}
+      </div>
     </>
   );
 };
+
 // =========================================================
 // Title component for the dialog header
 // =========================================================
@@ -95,7 +106,7 @@ const Description = ({ children }) => <p>{children}</p>;
 // =========================================================
 const Cancel = ({ children }) => {
   // Extract the setIsOpen function from context
-  const { setIsOpen } = useContext(AlertDialogContext);
+  const { setIsOpen } = useContext(DialogContext);
 
   // When clicked, close the dialog
   return React.cloneElement(children, { onClick: () => setIsOpen(false) });
@@ -106,7 +117,7 @@ const Cancel = ({ children }) => {
 // =========================================================
 const Action = ({ children, onAction }) => {
   // Extract the setIsOpen function from context
-  const { setIsOpen } = useContext(AlertDialogContext);
+  const { setIsOpen } = useContext(DialogContext);
 
   // cloneElement is used to pass the onClick function to the child of Action
   return React.cloneElement(children, {
@@ -118,10 +129,10 @@ const Action = ({ children, onAction }) => {
 };
 
 // =========================================================
-// Compile all sub-components into the AlertDialog object
+// Compile all sub-components into the Dialog object
 // =========================================================
-const AlertDialog = {
-  Root: AlertDialogRoot,
+const Dialog = {
+  Root: DialogRoot,
   Trigger,
   Content,
   Title,
@@ -130,5 +141,5 @@ const AlertDialog = {
   Action,
 };
 
-// Export the AlertDialog object
-export default AlertDialog;  
+// Export the Dialog object
+export default Dialog;  
