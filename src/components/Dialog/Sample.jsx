@@ -3,6 +3,8 @@ import Dialog from './Dialog.jsx';
 import Button from './Button.jsx';
 import Flex from './Flex.jsx';
 
+
+
 const Sample = () => {
   const handleFunction = () => {
     alert("You did something!");
@@ -15,12 +17,12 @@ const Sample = () => {
         <Dialog.Trigger>
           {/*  you can control Button (variant = soft or solid) */}
           <Button variant="solid" textColor="rgb(251, 251, 251)" bgColor="rgb(47, 46, 46)">
-            OPEN MODAL
+            Open Modal
           </Button>
         </Dialog.Trigger>
 
         {/*  you can control  (full-screen or slide-up/down ) */}
-        <Dialog.Content position={"full-screen"} >
+        <Dialog.Content position={"slid-up"} >
           <Dialog.Title>Opened Modal</Dialog.Title>
 
           <Dialog.Description>

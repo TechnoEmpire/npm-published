@@ -1,7 +1,16 @@
 import React, { useState, useContext, createContext } from 'react';
 import styled, { keyframes } from 'styled-components';
 
+
+
 const DialogContext = createContext();
+
+const loadFont = () => {
+  const link = document.createElement('link');
+  link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+  link.rel = 'stylesheet';
+  document.head.appendChild(link);
+};
 
 const fadeIn = keyframes`
   from { opacity: 0; }
@@ -23,7 +32,7 @@ const borderRadius = '10px';
 const shadow = '0 0 15px rgba(0,0,0,0.5)';
 
 const Overlay = styled.div`
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  display: ${({ isopen }) => (isopen ? 'block' : 'none')};
   position: fixed;
   top: 0;
   left: 0;
@@ -34,8 +43,9 @@ const Overlay = styled.div`
 `;
 
 const ModalContent = styled.div`
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  display: ${({ isopen }) => (isopen ? 'block' : 'none')};
   background-color: ${primaryColor};
+  font-family: 'Roboto', sans-serif;
   min-width: 700px;
   margin: 0 auto;
   position: absolute;
@@ -71,30 +81,30 @@ const ModalContent = styled.div`
 `;
 
 const DialogRoot = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isopen, setisopen] = useState(false);
 
   return (
-    <DialogContext.Provider value={{ isOpen, setIsOpen }}>
+    <DialogContext.Provider value={{ isopen, setisopen }}>
       {children}
     </DialogContext.Provider>
   );
 };
 
 const Trigger = ({ children }) => {
-  const { setIsOpen } = useContext(DialogContext);
-  return React.cloneElement(children, { onClick: () => setIsOpen(true) });
+  const { setisopen } = useContext(DialogContext);
+  return React.cloneElement(children, { onClick: () => setisopen(true) });
 };
 
 
 const Content = ({ position = "default", children }) => {
-  const { isOpen, setIsOpen } = useContext(DialogContext);
+  const { isopen, setisopen } = useContext(DialogContext);
 
-  if (!isOpen) return null; 
+  if (!isopen) return null; 
 
   return (
     <>
-      <Overlay isOpen={isOpen} onClick={() => setIsOpen(false)} />
-      <ModalContent className={position} isOpen={isOpen}>
+      <Overlay isopen={isopen} onClick={() => setisopen(false)} />
+      <ModalContent className={position} isopen={isopen}>
         {children}
       </ModalContent>
     </>
@@ -106,17 +116,17 @@ const Title = ({ children }) => <h1>{children}</h1>;
 const Description = ({ children }) => <p>{children}</p>;
 
 const Cancel = ({ children }) => {
-  const { setIsOpen } = useContext(DialogContext);
-  return React.cloneElement(children, { onClick: () => setIsOpen(false) });
+  const { setisopen } = useContext(DialogContext);
+  return React.cloneElement(children, { onClick: () => setisopen(false) });
 };
 
 const Action = ({ children, onAction }) => {
-  const { setIsOpen } = useContext(DialogContext);
+  const { setisopen } = useContext(DialogContext);
 
   return React.cloneElement(children, {
     onClick: () => {
       if (onAction) onAction();
-      setIsOpen(false);
+      setisopen(false);
     },
   });
 };

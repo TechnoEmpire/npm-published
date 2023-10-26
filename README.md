@@ -30,14 +30,14 @@ import { Button, Modal, ModalContent, ModalHeader, ModalBody } from '../../compo
 import styles from './TestPage.module.scss';
 
 const TestPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isopen, setisopen] = useState(false);
 
   const openModal = () => {
-    setIsOpen(true);
+    setisopen(true);
   };
 
   const closeModal = () => {
-    setIsOpen(false);
+    setisopen(false);
   };
 
   return (
@@ -50,7 +50,7 @@ const TestPage = () => {
       </Button>
 
       {/* Import button here */}
-      <Modal isOpen={isOpen} closeModal={closeModal}>
+      <Modal isopen={isopen} closeModal={closeModal}>
 
       <ModalContent position="slide-up">
 
