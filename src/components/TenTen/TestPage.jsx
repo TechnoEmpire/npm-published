@@ -29,7 +29,7 @@ const TestPage = ({ btnBg, btnTextColor }) => {
       {/* Import button here */}
       <Modal isOpen={isOpen} closeModal={closeModal}>
 
-      <ModalContent position="full-screen">
+      <ModalContent position="slide-down">
 
         {/* <ModalContent className={styles.content} > */}
           <ModalHeader onClick={closeModal} className={styles.Hea}>

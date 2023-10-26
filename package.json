@@ -25,7 +25,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.20",
