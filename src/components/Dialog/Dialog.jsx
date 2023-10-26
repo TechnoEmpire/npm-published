@@ -57,7 +57,7 @@ const ModalContent = styled.div`
   &.full-screen {
     position: fixed;
     top: 0;
-    left: 0;
+    /* left: 0; */
     width: 90%;
     height: 100vh;
     animation: ${fadeIn} 0.5s ease-in-out forwards;

@@ -14,7 +14,7 @@ const Sample = () => {
         
         <Dialog.Trigger>
           {/*  you can control Button (variant = soft or solid) */}
-          <Button variant="solid" textColor="rgb(62, 62, 62)" bgColor="rgb(229, 229, 229)">
+          <Button variant="solid" textColor="rgb(251, 251, 251)" bgColor="rgb(47, 46, 46)">
             OPEN MODAL
           </Button>
         </Dialog.Trigger>
@@ -34,7 +34,7 @@ const Sample = () => {
             </Dialog.Cancel>
 
             <Dialog.Action onAction={handleFunction}>
-              <Button variant="solid"  bgColor="rgb(123, 229, 41)">Do something</Button>
+              <Button variant="solid"  bgColor="rgb(30, 75, 210)">Do something</Button>
             </Dialog.Action>
           </Flex>
 
