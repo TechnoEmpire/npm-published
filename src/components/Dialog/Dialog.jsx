@@ -32,7 +32,7 @@ const borderRadius = '10px';
 const shadow = '0 0 15px rgba(0,0,0,0.5)';
 
 const Overlay = styled.div`
-  display: ${({ isopen }) => (isopen ? 'block' : 'none')};
+display: ${({ $isopen }) => ($isopen === "true" ? 'block' : 'none')};
   position: fixed;
   top: 0;
   left: 0;
@@ -43,7 +43,7 @@ const Overlay = styled.div`
 `;
 
 const ModalContent = styled.div`
-  display: ${({ isopen }) => (isopen ? 'block' : 'none')};
+display: ${({ $isopen }) => ($isopen === "true" ? 'block' : 'none')};
   background-color: ${primaryColor};
   font-family: 'Roboto', sans-serif;
   min-width: 700px;
@@ -103,8 +103,8 @@ const Content = ({ position = "default", children }) => {
 
   return (
     <>
-      <Overlay isopen={isopen} onClick={() => setisopen(false)} />
-      <ModalContent className={position} isopen={isopen}>
+      <Overlay $isopen={isopen.toString()} onClick={() => setisopen(false)} />
+      <ModalContent className={position} $isopen={isopen.toString()}>
         {children}
       </ModalContent>
     </>

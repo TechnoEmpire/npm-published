@@ -22,7 +22,7 @@ const Sample = () => {
         </Dialog.Trigger>
 
         {/*  you can control  (full-screen or slide-up/down ) */}
-        <Dialog.Content position={"slid-up"} >
+        <Dialog.Content position={"slide-down"} >
           <Dialog.Title>Opened Modal</Dialog.Title>
 
           <Dialog.Description>
