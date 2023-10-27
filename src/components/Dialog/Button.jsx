@@ -11,7 +11,7 @@ const Button = ({ textColor, variant, bgColor, children, ...props }) => {
     cursor: 'pointer',
 
     // Change Button Style (solid or soft)
-    borderRadius: variant === 'solid' ? '4px' : (variant === 'soft' ? '50px' : '0'),
+    borderRadius: variant === 'solid' ? '10px' : (variant === 'soft' ? '50px' : '0'),
   };
 
   return (

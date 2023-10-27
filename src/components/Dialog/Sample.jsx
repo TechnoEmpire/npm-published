@@ -1,8 +1,6 @@
-import React from 'react';
 import Dialog from './Dialog.jsx';
 import Button from './Button.jsx';
 import Flex from './Flex.jsx';
-
 
 
 const Sample = () => {
@@ -16,7 +14,7 @@ const Sample = () => {
         
         <Dialog.Trigger>
           {/*  you can control Button (variant = soft or solid) */}
-          <Button variant="solid" textColor="rgb(251, 251, 251)" bgColor="rgb(47, 46, 46)">
+          <Button variant="soft" textColor="rgb(251, 251, 251)" bgColor="rgb(47, 46, 46)">
             Open Modal
           </Button>
         </Dialog.Trigger>
@@ -32,11 +30,11 @@ const Sample = () => {
           {/*  you can control flex */}
           <Flex gap="20px" mt="60px" justify="end">
             <Dialog.Cancel>
-              <Button variant="soft" >Cancel</Button>
+              <Button variant="solid" >Cancel</Button>
             </Dialog.Cancel>
 
             <Dialog.Action onAction={handleFunction}>
-              <Button variant="solid"  bgColor="rgb(30, 75, 210)">Do something</Button>
+              <Button variant="solid"  bgColor="#B4DDF2">Do something</Button>
             </Dialog.Action>
           </Flex>
 

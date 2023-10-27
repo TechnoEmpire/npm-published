@@ -19,12 +19,12 @@ const fadeIn = keyframes`
 
 const slideUp = keyframes`
   from { bottom: -400px; }
-  to { bottom: 20%; }
+  to { bottom: 40%; }
 `;
 
 const slideDown = keyframes`
   from { top: -400px; }
-  to { top: 40%; }
+  to { top: 30%; }
 `;
 
 const primaryColor = '#ffffff';
