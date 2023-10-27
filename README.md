@@ -143,9 +143,7 @@ Here are the customization options for the modal:
 ## Demos
 
 ```js
-import Dialog from "./Dialog.jsx";
-import Button from "./Button.jsx";
-import Flex from "./Flex.jsx";
+import {Dialog, Button, Flex} from 'react-easy-modal'
 
 const Sample = () => {
   const handleFunction = () => {
