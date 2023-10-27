@@ -1,6 +1,6 @@
 <img src="./src/assets/TSKYPP%20logo%202x%20v2.png" alt="TSKYPP Logo" style="width:100%; height:300px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 3px 3px 5px #888;"> <br>
 
-# Modal (Pop-UP)
+# react-easy-modal
 
 ## Table
 
@@ -26,8 +26,8 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
 - `npm install  ` or `yarn add `.
 
 ```sh
-  $ npm install  tsykpp
-  $ yarn add tsykpp
+  $ npm install react-easy-modal
+  $ yarn add react-easy-modal
 ```
 
 ## Example
@@ -37,7 +37,7 @@ Here is a simple example of react-modal being used in an app with some custom st
 ## Basic
 
 ```js
-import { Dialog, Button, Flex } from "tsykpp";
+import { Dialog, Button, Flex } from "react-easy-modal";
 ```
 
 ## Use as a component:
