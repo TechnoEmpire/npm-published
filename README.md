@@ -120,7 +120,7 @@ Here are the customization options for the modal:
 
 - The modal provides animation options for sliding up , sliding down and fade In.
 
-- You can set the animation position by specifying the position prop when rendering the Content component. Choose either `'slide-up'`,`'slide-down'`, `'fadeIn'` based on your preference.
+- You can set the animation position by specifying the position prop when rendering the Content component. Choose either `'slide-up'`,`'slide-down'`, `'full-screen'` based on your preference.
 
 ### Button Text and Style:
 
