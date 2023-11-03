@@ -1,5 +1,6 @@
 import { Dialog, Button, Flex } from "tsykpp";
-import logo from '../public/TSKYPP.png';
+import logo from './assets/TSKYPP.png';
+
 
 function Home() {
   return (
