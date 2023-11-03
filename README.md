@@ -14,11 +14,6 @@
 
 - [Demos](#demos)
 
-<!-- ## Packages
-
-
-| TSKYPP | Version | -->
-
 ## Installation
 
 To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com):
@@ -29,6 +24,13 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
   $ npm install react-easy-modal
   $ yarn add react-easy-modal
 ```
+
+## Packages
+
+You can install the latest version by using:
+| Name | Version |
+| :-------------------------------------------------------------------------------- | :-----------------------------------------------: |
+| [`react-easy-modal`](https://github.com/TechnoEmpire/react-easy-modal/tree/main/) | [[1.0.54](https://www.npmjs.com/package/tsykpp) ] |
 
 ## Example
 
@@ -143,7 +145,7 @@ Here are the customization options for the modal:
 ## Demos
 
 ```js
-import {Dialog, Button, Flex} from 'react-easy-modal'
+import { Dialog, Button, Flex } from "react-easy-modal";
 
 const Sample = () => {
   const handleFunction = () => {
