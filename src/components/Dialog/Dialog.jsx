@@ -12,6 +12,20 @@ const loadFont = () => {
   document.head.appendChild(link);
 };
 
+
+const CloseButton = styled.button`
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
 const fadeIn = keyframes`
   from { opacity: 0; }
   to { opacity: 1; }
@@ -105,6 +119,7 @@ const Content = ({ position = "default", children }) => {
     <>
       <Overlay $isopen={isopen.toString()} onClick={() => setisopen(false)} />
       <ModalContent className={position} $isopen={isopen.toString()}>
+        <CloseButton onClick={() => setisopen(false)}>x</CloseButton>
         {children}
       </ModalContent>
     </>
