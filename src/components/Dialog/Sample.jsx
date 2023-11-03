@@ -30,7 +30,7 @@ const Sample = () => {
           {/*  you can control flex */}
           <Flex gap="20px" mt="60px" justify="end">
             <Dialog.Cancel>
-              <Button variant="solid" >Cancel</Button>
+              <Button variant="solid" bgColor="#dbdbdb" >Cancel</Button>
             </Dialog.Cancel>
 
             <Dialog.Action onAction={handleFunction}>
