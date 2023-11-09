@@ -1,6 +1,6 @@
 // import { Dialog, Button, Flex } from "tsykpp";
 import { Dialog, Button, Flex } from "react-handy-modal"
-import logo from "./asset/TSKYPP.png";
+import logo from './assets/TSKYPP.png'
 
 // Emotion CSS
 import { css } from "@emotion/react";
