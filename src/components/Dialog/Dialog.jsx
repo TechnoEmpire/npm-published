@@ -34,11 +34,21 @@ const fadeIn = keyframes`
 const slideUp = keyframes`
   from { bottom: -400px; }
   to { bottom: 40%; }
+    // @media screen and (max-width: 1199px) {
+    from { bottom: -400px; }
+    to { bottom: 10%; }
+
+    // }
 `;
 
 const slideDown = keyframes`
   from { top: -400px; }
   to { top: 30%; }
+    // @media screen and (max-width: 1199px) {
+    from { top: -400px; }
+  to { top: 50%; }
+
+    // }
 `;
 
 const primaryColor = '#ffffff';
