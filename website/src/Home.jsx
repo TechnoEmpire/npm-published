@@ -86,10 +86,6 @@ const homeCSS = css`
   .sampleBtns {
     padding: 20px;
     display: flex;
-
-    @media screen and (max-width: 1199px) {
-      display: none;
-    }
   }
 `;
 
