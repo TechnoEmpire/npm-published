@@ -133,13 +133,13 @@ function Home() {
                   <Dialog.Content
                     position={"slide-up"}
                   >
-                    <Dialog.Title >
-                      It is modal with solid button, with slide-up animation
-                    </Dialog.Title>
+                  <div className=''>
+                      <h1 className='text-6xl'>WeIcome to react-handy-modal</h1>
 
-                    <p className="mt-1">
-                      Explore `react-handy-modal` on Github
-                    </p>
+                      <h3 className='text-2xl mt-20'>
+                        Explore `react-handy-modal` on Github
+                      </h3>
+                    </div>
 
                     {/* you can control flex */}
                     <Flex gap="20px" mt="60px" justify="end">
@@ -185,13 +185,13 @@ function Home() {
 
                   {/* you can control (full-screen or slide-up/down) */}
                   <Dialog.Content position={"slide-down"}>
-                    <Dialog.Title>
-                      It is modal with soft button, with slide-down animation
-                    </Dialog.Title>
+                   <div className=''>
+                      <h1 className='text-6xl'>WeIcome to react-handy-modal</h1>
 
-                    <Dialog.Description>
-                      Explore `react-easy-modal` on Github
-                    </Dialog.Description>
+                      <h3 className='text-2xl mt-20'>
+                        Explore `react-handy-modal` on Github
+                      </h3>
+                    </div>
 
                     {/* you can control flex */}
                     <Flex gap="20px" mt="60px" justify="end">
