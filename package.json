@@ -1,6 +1,6 @@
 {
-  "version": "1.0.50",
-  "name": "tsykpp",
+  "version": "1.0.1",
+  "name": "react-handy-modal",
   "private": false,
   "license": "MIT",
   "type": "module",

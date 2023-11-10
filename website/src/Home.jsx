@@ -130,7 +130,7 @@ function Home() {
 
                   {/* you can control (full-screen or slide-up/down) */}
                   <Dialog.Content
-                    position={"slide-up"}
+                    position={"full-screen "}
                   >
                     <Dialog.Title>
                       It is modal with solid button, with slide-up animation

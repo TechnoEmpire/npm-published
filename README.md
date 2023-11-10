@@ -1,4 +1,4 @@
-<img src="./src/assets/TSKYPP%20logo%202x%20v2.png" alt="TSKYPP Logo" style="width:100%; height:300px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 3px 3px 5px #888;"> <br>
+<img src="./src/assets/TSKYPP-logo.png" alt="TSKYPP Logo" style="width:100%; height:300px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 3px 3px 5px #888;"> <br>
 
 # react-easy-modal
 
@@ -16,7 +16,7 @@
 
 ## Installation
 
-To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com):
+To install, you can use [npm](https://www.npmjs.com/package/react-handy-modal) or [yarn](https://www.npmjs.com/package/react-handy-modal):
 
 - `npm install  ` or `yarn add `.
 
@@ -30,7 +30,7 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
 You can install the latest version by using:
 | Name | Version |
 | :-------------------------------------------------------------------------------- | :-----------------------------------------------: |
-| [`react-easy-modal`](https://github.com/TechnoEmpire/react-easy-modal/tree/main/) | [[1.0.54](https://www.npmjs.com/package/tsykpp) ] |
+| [`react-handy-modal`](https://github.com/TechnoEmpire/react-easy-modal/tree/main/) | [[1.0.1](https://www.npmjs.com/package/tsykpp) ] |
 
 ## Example
 
@@ -39,7 +39,7 @@ Here is a simple example of react-modal being used in an app with some custom st
 ## Basic
 
 ```js
-import { Dialog, Button, Flex } from "react-easy-modal";
+import { Dialog, Button, Flex } from "react-handy-modal";
 ```
 
 ## Use as a component:
@@ -64,7 +64,7 @@ import { Dialog, Button, Flex } from "react-easy-modal";
           <Button variant="soft">Cancel</Button>
         </Dialog.Cancel>
 
-        <Dialog.Action onAction={handleFunction}>
+        <Dialog.Action>
           <Button variant="solid" bgColor="rgb(30, 75, 210">
             Do something
           </Button>
@@ -148,10 +148,6 @@ Here are the customization options for the modal:
 import { Dialog, Button, Flex } from "react-easy-modal";
 
 const Sample = () => {
-  const handleFunction = () => {
-    alert("You did something!");
-  };
-
   return (
     <div style={{ padding: "20px" }}>
       <Dialog.Root>
@@ -181,7 +177,7 @@ const Sample = () => {
               <Button variant="soft">Cancel</Button>
             </Dialog.Cancel>
 
-            <Dialog.Action onAction={handleFunction}>
+            <Dialog.Action>
               <Button variant="solid" bgColor="rgb(30, 75, 210)">
                 Do something
               </Button>

@@ -13,6 +13,20 @@ const loadFont = () => {
 };
 
 
+// const CloseButton = styled.button`
+//   position: absolute;
+//   right: 15px;
+//   top: 15px;
+//   background: transparent;
+//   border: none;
+//   font-size: 24px;
+//   cursor: pointer;
+//   &:hover {
+//     opacity: 0.7;
+//   }
+// `;
+
+
 const CloseButton = styled.button`
   position: absolute;
   right: 15px;
@@ -21,8 +35,14 @@ const CloseButton = styled.button`
   border: none;
   font-size: 24px;
   cursor: pointer;
+
   &:hover {
+    color: purple; 
     opacity: 0.7;
+  }
+
+  &:active {
+    color: darkpurple; /* Change the text color when clicked */
   }
 `;
 
@@ -96,7 +116,9 @@ display: ${({ $isopen }) => ($isopen === "true" ? 'block' : 'none')};
     height: 100vh;
     animation: ${fadeIn} 0.5s ease-in-out forwards;
     padding: 4rem 4rem;
+    z-index:999
   }
+
 
   @media screen and (max-width: 768px) {
     min-width: 70%;
