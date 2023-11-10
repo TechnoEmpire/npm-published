@@ -56,7 +56,7 @@ const slideUp = keyframes`
   to { bottom: 40%; }
     // @media screen and (max-width: 1199px) {
     from { bottom: -400px; }
-    to { bottom: 40%; }
+    to { bottom: 50%; }
 
     // }
 `;
