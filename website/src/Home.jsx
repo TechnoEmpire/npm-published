@@ -137,7 +137,7 @@ function Home() {
                       It is modal with solid button, with slide-up animation
                     </Dialog.Title>
 
-                    <Dialog.Description  css={{ padding: '20px 0' }}>
+                    <Dialog.Description  css={{  margin-top: 60px; }}>
                       Explore `react-handy-modal` on Github
                     </Dialog.Description>
 
