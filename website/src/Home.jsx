@@ -72,7 +72,7 @@ const homeCSS = css`
     }
   }
 
-  p {
+  .content {
     font-size: 1.3rem;
     letter-spacing: 0.1rem;
 
@@ -81,6 +81,7 @@ const homeCSS = css`
       font-size: 1.2rem;
     }
   }
+
 
   // COMPONENT BUTTONS
   .sampleBtns {
@@ -103,7 +104,7 @@ function Home() {
         <div className="descArea w-full md:w-1/2 p-10 flex justify-center items-center">
           <div className="">
             <h1 className="text-6xl mb-4 leading-none">Welcome</h1>
-            <p className="mb-8 text-sm leading-relaxed">
+            <p className="mb-8 text-sm leading-relaxed content">
               Here’s what you need to know before getting started with the
               navbar: The best way to consume React is via the npm package which
               you can install with npm (or yarn if you prefer). If you plan on
@@ -132,18 +133,18 @@ function Home() {
                   <Dialog.Content
                     position={"slide-up"}
                   >
-                    <Dialog.Title>
+                    <Dialog.Title >
                       It is modal with solid button, with slide-up animation
                     </Dialog.Title>
 
                     <Dialog.Description>
-                      Explore `react-easy-modal` on Github
+                      Explore `react-handy-modal` on Github
                     </Dialog.Description>
 
                     {/* you can control flex */}
                     <Flex gap="20px" mt="60px" justify="end">
                       <Dialog.Cancel>
-                        <Button variant="soft">Close</Button>
+                        <Button variant="solid">Close</Button>
                       </Dialog.Cancel>
 
                       <Button
@@ -160,6 +161,14 @@ function Home() {
                   </Dialog.Content>
                 </Dialog.Root>
               </div>
+
+
+
+
+
+
+
+
               {/* soft button */}
               <div style={{ margin: "10px" }}>
                 <Dialog.Root>

@@ -65,7 +65,7 @@ export const Header = () => {
           rel="noopener noreferrer"
           className="lg:text-2xl text-gray-100 leading-tight md:text-xl sm:text-sm"
         >
-          React-Easy-Modal
+          react-handy-modal
         </a>
 
         <ul className="flex text-lg lowercase italic">

@@ -7,6 +7,34 @@ const Sample = () => {
 
   return (
     <div style={{ padding: '20px' }}>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
+      <h1>Sample</h1>
       <Dialog.Root>
         
         <Dialog.Trigger>
@@ -17,7 +45,7 @@ const Sample = () => {
         </Dialog.Trigger>
 
         {/*  you can control  (full-screen or slide-up/down ) */}
-        <Dialog.Content position={"slide-down"} >
+        <Dialog.Content position={"slide-up"} >
           <Dialog.Title>Opened Modal</Dialog.Title>
 
           <Dialog.Description>

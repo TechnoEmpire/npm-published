@@ -53,10 +53,10 @@ const fadeIn = keyframes`
 
 const slideUp = keyframes`
   from { bottom: -400px; }
-  to { bottom: 40%; }
+  to { bottom: 30%; }
     // @media screen and (max-width: 1199px) {
     from { bottom: -400px; }
-    to { bottom: 50%; }
+    to { bottom: 30%; }
 
     // }
 `;
@@ -67,7 +67,6 @@ const slideDown = keyframes`
     // @media screen and (max-width: 1199px) {
     from { top: -400px; }
   to { top: 30%; }
-
     // }
 `;
 
@@ -102,10 +101,13 @@ display: ${({ $isopen }) => ($isopen === "true" ? 'block' : 'none')};
 
   &.slide-up {
     animation: ${slideUp} 0.5s ease forwards;
+    position: fixed;
+
   }
 
   &.slide-down {
     animation: ${slideDown} 0.5s ease forwards;
+    position: fixed;
   }
 
   &.full-screen {
