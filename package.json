@@ -1,6 +1,11 @@
 {
   "version": "1.0.1",
   "name": "react-handy-modal",
+  "homepage": "https://react-easy-modal.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechnoEmpire/react-handy-modal"
+  },
   "private": false,
   "license": "MIT",
   "type": "module",
