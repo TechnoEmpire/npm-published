@@ -5,12 +5,12 @@ import styled, { keyframes } from 'styled-components';
 
 const DialogContext = createContext();
 
-const loadFont = () => {
-  const link = document.createElement('link');
-  link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
-  link.rel = 'stylesheet';
-  document.head.appendChild(link);
-};
+// const loadFont = () => {
+//   const link = document.createElement('link');
+//   link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+//   link.rel = 'stylesheet';
+//   document.head.appendChild(link);
+// };
 
 
 // const CloseButton = styled.button`
