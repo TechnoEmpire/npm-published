@@ -4,9 +4,6 @@ import Flex from './Flex.jsx';
 
 
 const Sample = () => {
-  const handleFunction = () => {
-    alert("You did something!");
-  };
 
   return (
     <div style={{ padding: '20px' }}>
@@ -20,7 +17,7 @@ const Sample = () => {
         </Dialog.Trigger>
 
         {/*  you can control  (full-screen or slide-up/down ) */}
-        <Dialog.Content position={"slide-up "} >
+        <Dialog.Content position={"full-screen"} >
           <Dialog.Title>Opened Modal</Dialog.Title>
 
           <Dialog.Description>
@@ -30,10 +27,10 @@ const Sample = () => {
           {/*  you can control flex */}
           <Flex gap="20px" mt="60px" justify="end">
             <Dialog.Cancel>
-              <Button variant="solid" bgColor="#dbdbdb" >Cancel</Button>
+              <Button variant="solid" >Cancel</Button>
             </Dialog.Cancel>
 
-            <Dialog.Action onAction={handleFunction}>
+            <Dialog.Action>
               <Button variant="solid"  bgColor="#B4DDF2">Do something</Button>
             </Dialog.Action>
           </Flex>

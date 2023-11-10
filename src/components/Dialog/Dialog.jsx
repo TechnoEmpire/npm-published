@@ -37,7 +37,7 @@ const CloseButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    color: purple; 
+    color: #878787; 
     opacity: 0.7;
   }
 
@@ -56,7 +56,7 @@ const slideUp = keyframes`
   to { bottom: 40%; }
     // @media screen and (max-width: 1199px) {
     from { bottom: -400px; }
-    to { bottom: 10%; }
+    to { bottom: 40%; }
 
     // }
 `;
@@ -66,7 +66,7 @@ const slideDown = keyframes`
   to { top: 30%; }
     // @media screen and (max-width: 1199px) {
     from { top: -400px; }
-  to { top: 50%; }
+  to { top: 30%; }
 
     // }
 `;
@@ -110,13 +110,13 @@ display: ${({ $isopen }) => ($isopen === "true" ? 'block' : 'none')};
 
   &.full-screen {
     position: fixed;
-    top: 0;
+    top: 30px;
     /* left: 0; */
-    width: 90%;
-    height: 100vh;
+    width: 80%;
+    height: 80vh;
     animation: ${fadeIn} 0.5s ease-in-out forwards;
     padding: 4rem 4rem;
-    z-index:999
+    z-index: 999;
   }
 
 
