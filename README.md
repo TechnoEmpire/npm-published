@@ -1,6 +1,6 @@
 <img src="./src/assets/TSKYPP-logo.png" alt="TSKYPP Logo" style="width:100%; height:300px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 3px 3px 5px #888;"> <br>
 
-# react-easy-modal
+# react-handy-modal
 
 ## Table
 
@@ -21,8 +21,8 @@ To install, you can use [npm](https://www.npmjs.com/package/react-handy-modal) o
 - `npm install  ` or `yarn add `.
 
 ```sh
-  $ npm install react-easy-modal
-  $ yarn add react-easy-modal
+  $ npm install react-handy-modal
+  $ yarn add react-handy-modal
 ```
 
 ## Packages
