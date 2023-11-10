@@ -30,7 +30,7 @@ To install, you can use [npm](https://www.npmjs.com/package/react-handy-modal) o
 You can install the latest version by using:
 | Name | Version |
 | :-------------------------------------------------------------------------------- | :-----------------------------------------------: |
-| [`react-handy-modal`](https://github.com/TechnoEmpire/react-easy-modal/tree/main/) | [[1.0.1](https://www.npmjs.com/package/tsykpp) ] |
+| [`react-handy-modal`](https://www.npmjs.com/package/react-handy-modal) | [[1.0.1](https://www.npmjs.com/package/react-handy-modal) ] |
 
 ## Example
 
